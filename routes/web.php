@@ -89,6 +89,49 @@ Route::post('post-signup', [AuthController::class, 'postSignup'])->name('signup.
 
 
 
+///////////////////////////////////////////////////////////////////// simula bago dagadag
+Route::get('/user-index-new', function () {
+    return view('user/user-index-new');
+});
+
+Route::get('/myjobprofile', function () {
+    return view('user/myjobprofile');
+});
+
+Route::get('/work-experience', function () {
+    return view('user/work-experience');
+});
+
+Route::get('/education', function () {
+    return view('user/education');
+});
+
+Route::get('/upload-resume', function () {
+    return view('user/upload-resume');
+});
+
+Route::get('/skills', function () {
+    return view('user/skills');
+});
+
+Route::get('/language', function () {
+    return view('user/language');
+});
+
+Route::get('/additional-info', function () {
+    return view('user/additional-info');
+});
+
+Route::get('/about', function () {
+    return view('user/about');
+});
+
+Route::get('/user-resume', [UserIndexController::class, 'DownloadResume'])->name('pdf/user-resume');
+
+/////////////////////////////////////////end DAGDAB
+
+
+
 Route::get('/find-jobs', function () {
     return view('find-jobs');
 });

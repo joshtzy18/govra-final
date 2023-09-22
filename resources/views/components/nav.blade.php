@@ -10,10 +10,10 @@
 </head>
 
 <body class="bg-white-400">
-  <nav class="text-white p-5 bg-blue-500 z-50 shadow md:flex md:items-center md:justify-between fixed w-full top-0">
+  <nav class="text-white p-3 bg-blue-500 z-50 shadow md:flex md:items-center  md:justify-evenly fixed w-full top-0">
     <div class="flex justify-between items-center ">
-      <span class="text-2xl font-[Poppins] cursor-pointer">
-        <img class="h-10 inline " src="{{URL('assets/images/govra_logo.png')}}" alt="govlogo">
+      <span class="text-xl font-[Poppins] cursor-pointer">
+        <img class="h-9 inline  " src="{{URL('assets/images/govra_logo.png')}}" alt="govlogo">
         GOVRA
       </span>
 
@@ -32,15 +32,18 @@
         
 
       <li class="mx-4 my-6 md:my-0">
-        <a href="/" class=" text-white text-xl hover:text-slate-950 duration-500 font-sans font-semibold">HOME</a>
+        <a href="/" class=" text-white text-xl xl:text-2xl hover:text-slate-950 duration-500 font-sans font-semibold">GOVPH</a>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <a href="/job-offers-user" class="text-white text-xl hover:text-slate-950 duration-500 font-sans font-semibold">FIND JOBS</a>
+        <a href="/myjobprofile" class="text-white text-xl hover:text-slate-950 duration-500 font-sans font-semibold">MyJob Profile</a>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <a href="#" class="text-white text-xl hover:text-slate-950 duration-500 font-sans font-semibold" >GOVERNMENT</a>
+        <a href="/job-offers-user" class="text-white text-xl hover:text-slate-950 duration-500 font-sans font-semibold">Find Jobs</a>
       </li>
-<li><button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white font-medium rounded-lg text-xl uppercase px-5 py-2.5 text-center inline-flex items-center" type="button">About <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#" class="text-white text-xl hover:text-slate-950 duration-500 font-sans font-semibold" >Government</a>
+      </li>
+<li><button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white font-medium rounded-lg text-xl  px-5 py-2.5 text-center inline-flex items-center" type="button">About <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
 </svg></button>
 <!-- Dropdown menu -->
@@ -63,15 +66,15 @@
 
 
       <li class="mx-4 my-6 md:my-0">
-        <a href="#" class="text-white text-xl hover:text-slate-950 duration-500font-sans font-semibold">CONTACT</a>
+        <a href="#" class="text-white text-xl hover:text-slate-950 duration-500font-sans font-semibold">Contact</a>
       </li>
-      <li class="ml-4 my-6 md:my-0">
-        <a href="/login" class="text-white text-xl hover:text-slate-950 duration-500 font-sans font-semibold">LOGIN</a>
+      <li class=" ml-40 my-6 md:my-0">
+        <a href="/login" class="text-white text-xl hover:text-slate-950 duration-500 font-sans font-semibold">Login</a>
       </li>
       <li class="mx-4 my-6 md:my-0">
       
 
-      <button class="bg-cyan-400 text-white font-sans font-semibold duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded ">
+      <button class="border-2 border-solid border-cyan-500 text-white font-sans font-semibold duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded ">
         Sign up Free
       </button>
       </li>

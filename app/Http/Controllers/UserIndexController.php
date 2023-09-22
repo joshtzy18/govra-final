@@ -5,6 +5,7 @@ use Illuminate\View\View;
 use App\Models\Examination;
 use App\Models\NewsUpdates;
 use App\Models\Announcement;
+use PDF;
 
 
 use Illuminate\Http\Request;
@@ -84,6 +85,23 @@ class UserIndexController extends Controller
      
 
        return view('user/examination-clicked', compact('exam'));
+
+    }
+
+    public function DownloadResume(){
+
+        $pdf = PDF::loadView('pdf.user-resume')
+        ->setPaper('A4', 'portrait');
+        return $pdf->stream();
+
+        
+        // return  view('pdf.user-resume');
+        // return $pdf->download('resume.pdf');
+
+        
+        // $pdf = PDF::loadView('pdf.user-resume');
+        
+        // return $pdf->download('user-resume.pdf');
 
     }
    
