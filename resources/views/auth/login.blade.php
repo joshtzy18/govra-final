@@ -8,8 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
+    {{-- <link rel="stylesheet" href="{{ asset('css/loaders.css') }}"> --}}
     @vite('resources/css/app.css')
 </head>
+
 <body>
     <div class="flex justify-center items-center max-w-screen max-h-sm h-[46rem]">
         <div class="flex max-w-sm sm:max-w-md md:max-w-lg lg:max-w-3xl xl:max-w-5xl lg:max-h-xl lg:h-3/4 lg:w-screen xl:h-4/5 w-4/5 h-1/2 shadow-lg justify-center items-center">
@@ -30,7 +32,11 @@
                 </div>
 
                 <h1 class="text-3xl text-center mt-8 mb-3 font-sans font-bold lg:mt-0 xl:text-4xl text-white z-10">Login</h1>
-
+                @if(session('login_success'))
+                    <div class="alert alert-success">
+                        {{ session('login_success') }}
+                    </div>
+                @endif
                 <div class="relative max-w-[80%] sm:max-w-[80%] md:max-w-[80%] lg:max-w-[80%] lg:h-1/2 w-full h-4/5 px-3 z-10">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf

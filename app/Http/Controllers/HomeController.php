@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Laravolt\Avatar\Avatar;
 
 use Illuminate\Http\Request;
 
@@ -23,6 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('home')->with('login_success', 'Login Successful!');
+        
     }
+   
+
 }
