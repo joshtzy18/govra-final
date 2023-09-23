@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Examination;
 use App\Models\TextWidget;
 use App\Models\Users;
+use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\ProfileController;
+use Laravolt\Avatar\Avatar;
+
 
 
 /*
@@ -30,6 +34,26 @@ use App\Models\Users;
 */
 // Route::get('/', [Login::class, 'index'])->name('auth/login');
 
+
+Route::get('/profile', [ProfileController::class, 'show']);
+
+Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
+Route::post('/admin/picture/update', [AdminController::class, 'updatePicture'])->name('adminPictureUpdate');
+
+
+Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
+Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
+
+
+
+Route::get('/home', [HomeController::class, 'showProfile']);
+Route::get('/', function(){
+    $img = Avatar::create('Vince Ramirez')->toBase64();
+    return view ('home', ["image" => $img]);
+});
+
+Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
+Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
 // Login and Registration Routes
 Route::get('/', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/', [LoginController::class, 'authenticate'])->name('authenticate');

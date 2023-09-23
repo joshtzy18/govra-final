@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
 <html>
 
@@ -78,10 +81,52 @@
         Sign up Free
       </button>
       </li>
-    </ul>
+      <li>
+        <button id="profileDropdownHoverButton" data-dropdown-toggle="profileDropdownHover" data-dropdown-trigger="hover" class="text-white font-medium rounded-lg text-xl px-5 py-2.5 text-center inline-flex items-center" type="button">
+          
+          {{-- PROFILE HERE --}}
+        <!-- Profile Image using base64 encoded avatar -->
+        {{-- @auth('user')
+        @if(auth()->guard('user')->user())
+            @php
+                $user = auth()->guard('user')->user();
+                $name = $user->name;
+                $avatar = Avatar::create($name)->toBase64();
+            @endphp
+            <img src="data:image/png;base64,{{ $avatar }}" alt="Profile Image" class="avatar-img rounded-circle">
+        @endif
+    @endauth
+     --}}
+
+
+
+            
+        
+    
+            <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            </svg>
+        </button>
+        <!-- Dropdown menu -->
+        <div id="profileDropdownHover" class="absolute z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="profileDropdownHoverButton">
+             
+            
+              <li>
+                <a href="{{ route('profile') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit Profile</a>
+            </li>
+            <li>
+                <a href="{{ route('logout') }}" id="logoutLink" class="nav-link block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Log out</a>
+            </li>
+            
+    
+    
+    
 <h2 class=""></h2>
     </ul>
   </nav>
+
+  
 
   {{-- <div class=" w-96 h-70 mt-8">
    
@@ -141,3 +186,29 @@
 
 
   </script>
+  <script>
+const profileButton = document.getElementById('profileDropdownHoverButton');
+const profileDropdown = document.getElementById('profileDropdownHover');
+
+// Show the profile dropdown when the button is hovered
+profileButton.addEventListener('mouseover', () => {
+    profileDropdown.classList.remove('hidden');
+});
+
+// Hide the profile dropdown when the mouse leaves the button or dropdown
+profileButton.addEventListener('mouseleave', () => {
+    profileDropdown.classList.add('hidden');
+});
+
+profileDropdown.addEventListener('mouseleave', () => {
+    profileDropdown.classList.add('hidden');
+});
+
+// Prevent the profile dropdown from hiding when the mouse moves within the dropdown
+profileDropdown.addEventListener('mouseover', () => {
+    profileDropdown.classList.remove('hidden');
+});
+
+
+  </script>
+  

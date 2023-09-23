@@ -40,7 +40,21 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+    
+        'api' => [
+            'driver' => 'token',
+            'provider' => 'users',
+            'hash' => false,
+        ],
+    
+        // Add the 'user' guard
+        'user' => [
+            'driver' => 'session',
+            'provider' => 'users',  // Change 'users' to your actual provider
+        ],
     ],
+    
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -65,10 +79,10 @@ return [
             'model' => App\Models\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'users' => [
+            'driver' => 'database',
+            'table' => 'users',
+        ],
     ],
 
     /*

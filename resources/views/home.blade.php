@@ -1,5 +1,10 @@
 <x-app-layout>
-
+  @if(session('login_success'))
+            <div class="alert alert-success">
+                {{ session('login_success') }}
+            </div>
+        @endif
+       
   {{-- <body class="bg-white-400">
     <nav class="text-white p-5 bg-blue-500 shadow md:flex md:items-center md:justify-between">
       <div class="flex justify-between items-center ">
